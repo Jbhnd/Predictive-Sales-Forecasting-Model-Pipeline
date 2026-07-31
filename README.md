@@ -25,5 +25,4 @@ Evaluated multiple models using Mean Absolute Error (MAE) and R-squared ($R^2$) 
 * Considering the skewness of the sales data, the MEA % is calculated on the median.
 
 ## Repository Structure & Project Flow
-1. **`/sql_queries`**: Contains the feature engineering scripts that structured time-series metrics into flat files ready for model inputs.
-2. **`/notebooks`**: Holds the model training, hyperparameter tuning (GridSearchCV), feature importance mapping, and validation testing.
+* **`/notebooks`**: Holds the model training, hyperparameter tuning (GridSearchCV), feature importance mapping, and validation testing.
