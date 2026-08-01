@@ -25,4 +25,8 @@ Evaluated multiple models using Mean Absolute Error (MAE) and R-squared ($R^2$) 
 * Considering the skewness of the sales data, the MEA % is calculated on the median.
 
 ## Repository Structure & Project Flow
+* **`/data`**: Holds the data for building the model, and sample data for the live app predictions.
 * **`/notebooks`**: Holds the model training, hyperparameter tuning (GridSearchCV), feature importance mapping, and validation testing.
+* **`/model`**: Holds the tested winning model file.
+* **`app.py`**: Live app file.
+* **`requirements.txt`**: Requirements for the live app.
