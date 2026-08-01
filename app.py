@@ -14,7 +14,7 @@ st.markdown('Upload your raw data file beliw to generate instant prediction')
 @st.cache_resource
 def load_pipeline():
     try:
-        return joblib.load('.model/pipeline_model.joblib')
+        return joblib.load('model/pipeline_model.joblib')
     except Exception as e:
         st.error(f'Error loading model file: {e}')
         return None
