@@ -24,6 +24,9 @@ Evaluated multiple models using Mean Absolute Error (MAE) and R-squared ($R^2$) 
 | Gradient Boosting Regressor| Optimized gradient boosting regressor|99.317 |28.861%|
 * Considering the skewness of the sales data, the MEA % is calculated on the median.
 
+## Live Prediction Using Sample Data
+[Businesss Prediction Dashboard](https://predictive-sales-forecasting-model-pipeline.streamlit.app/)
+
 ## Repository Structure & Project Flow
 * **`/data`**: Holds the data for building the model, and sample data for the live app predictions.
 * **`/notebooks`**: Holds the model training, hyperparameter tuning (GridSearchCV), feature importance mapping, and validation testing.
