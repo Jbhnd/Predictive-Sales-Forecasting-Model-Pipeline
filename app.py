@@ -98,7 +98,7 @@ if raw_df is not None:
 
                 # Download output
                 st.download_button(
-                    label='Download Prediction Data as CSV',
+                    label='Download Prediction Results as CSV',
                     data=csv_data,
                     file_name='predicted_business_results.csv',
                     mime='text/csv'
