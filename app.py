@@ -76,6 +76,7 @@ if raw_df is not None:
         # Display preview of uploaded_file
         st.subheader('Raw Data Preview')
         st.dataframe(raw_df.head(5))
+        st.text(f'Rows Loaded: {raw_df.shape[0]}')
         st.button('Generate Predictions', type='primary', on_click=set_state_true, args=['gen_predictions'])
         
         if st.session_state.gen_predictions:
@@ -90,7 +91,8 @@ if raw_df is not None:
                 # Display updated preview with predictions included
                 st.subheader('Prediction Results')
                 st.dataframe(raw_df.head(10))
-
+                st.text(f'Rows Loaded: {raw_df.shape[0]}')
+                
                 # Convert final
                 csv_data = raw_df.to_csv(index=False).encode('utf-8')
 
