@@ -85,7 +85,7 @@ if raw_df is not None:
                 predictions = pipeline.predict(raw_df)
             
                 # Append predictions
-                raw_df['Model_Predictions'] = predictions
+                raw_df['Model_Sales_Predictions'] = predictions
                 raw_df = raw_df.round(3)
                 
                 # Display updated preview with predictions included
