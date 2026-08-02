@@ -91,7 +91,7 @@ if raw_df is not None:
                 # Display updated preview with predictions included
                 st.subheader('Prediction Results')
                 st.dataframe(raw_df.head(10))
-                st.text(f'Rows Loaded: {raw_df.shape[0]}')
+                st.text(f'Rows Predicted: {raw_df.shape[0]}')
                 
                 # Convert final
                 csv_data = raw_df.to_csv(index=False).encode('utf-8')
