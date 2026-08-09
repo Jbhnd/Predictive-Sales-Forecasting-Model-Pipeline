@@ -52,11 +52,20 @@ if 'use_sample' not in st.session_state:
 if 'gen_predictions' not in st.session_state:
     st.session_state['gen_predictions'] = False
 
+if 'uploader_key' not in st.session_state:
+    st.session_state['uploader_key'] = 0
+
 def set_state_true(key_name):
     st.session_state[key_name] = True
+    if key_name=='use_sample':
+        update_uploader_key()
+        set_state_false('gen_predictions')
 
 def set_state_false(key_name):
     st.session_state[key_name] = False
+
+def update_uploader_key():
+    st.session_state['uploader_key'] += 1
 
 # Provide dataset (Upload or use sample)
 st.markdown('### Provide your dataset')
@@ -68,7 +77,8 @@ with col1:
         'Upload an Excel (.xlsx) or CSV (.csv) file',
         type=['csv', 'xlsx'],
         on_change=set_state_false,
-        args=['gen_predictions']
+        args=['gen_predictions'],
+        key=f'uploader_key_{st.session_state['uploader_key']}'
     )
 
 # Use sample file widget
@@ -89,7 +99,6 @@ if uploaded_file is not None:
         raw_df = pd.read_excel(uploaded_file)
 elif st.session_state.use_sample:
     raw_df = get_sample_data()
-    st.session_state.use_sample = True
 
 
 if raw_df is not None:
