@@ -1,16 +1,20 @@
 # Predictive Sales Forecasting Model Pipeline
 
-## Project Overview
-An advanced predictive analytics project implementing machine learning algorithms to forecast monthly sales revenue. This project demonstrates a complete machine learning lifecycle, evaluating multiple model classes (Linear Regression, Random Forest, and Gradient Boosting) to minimize error metrics.
+## Overview
+This is an advanced predictive analytics initiative that implements machine learning algorithms to forecast monthly sales revenue. This initiative implements a complete machine learning lifecycle, evaluating multiple model classes (Linear Regression, Random Forest, and Gradient Boosting) to minimize error metrics, and creates a pipeline for future sales predictions.
 
 ## Business Challenge
-Traditional moving-average forecasting models were failing to account for non-linear feature interactions, leading to supply chain inefficiencies and stockouts. This project builds a robust forecasting pipeline to predict future sales targets based on historical trends, pricing adjustments, and marketing spends.
+Traditional moving-average forecasting models were failing to account for non-linear feature interactions, leading to supply chain inefficiencies and stockouts. This project builds a robust forecasting pipeline to predict future sales targets based on historical trends in pricing adjustments, location and sku specifics, and marketing spends.
+
+## Live Prediction Using Sample Data
+[Businesss Prediction Dashboard](https://predictive-sales-forecasting-model-pipeline.streamlit.app/)
 
 ## Tech Stack
 
 * **Feature Extraction:** SQL (CTEs, aggregate functions)
-* **Modeling & Pipelines:** Python (scikit-learn, pandas, numpy)
+* **Modeling & Pipelines:** Python (scikit-learn, pandas, numpy), Sklearn (Preprocessing, Pipeline, Ensemble, Metrics), Joblib
 * **Core Algorithms:** Linear Regression, Random Forest Regressor, Gradient Boosting Regressor
+* **Live Prediction:** Streamlit, CSS
 
 ## Model Evaluation & Performance Results
 Evaluated multiple models using Mean Absolute Error (MAE) and R-squared ($R^2$) to identify the optimal configuration:
@@ -23,9 +27,6 @@ Evaluated multiple models using Mean Absolute Error (MAE) and R-squared ($R^2$) 
 | Random Forest Regressor| Optimized random forest|106.471 |31.862%|
 | Gradient Boosting Regressor| Optimized gradient boosting regressor|99.317 |28.861%|
 * Considering the skewness of the sales data, the MEA % is calculated on the median.
-
-## Live Prediction Using Sample Data
-[Businesss Prediction Dashboard](https://predictive-sales-forecasting-model-pipeline.streamlit.app/)
 
 ## Repository Structure & Project Flow
 * **`/data`**: Holds the data for building the model, and sample data for the live app predictions.
