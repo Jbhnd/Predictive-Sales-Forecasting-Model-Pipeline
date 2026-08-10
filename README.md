@@ -11,9 +11,10 @@ Traditional moving-average forecasting models were failing to account for non-li
 
 ## Tech Stack
 
-* **Feature Extraction:** SQL (CTEs, aggregate functions)
+* **Data Extraction:** SQL (CTEs, aggregate functions)
 * **Modeling & Pipelines:** Python (scikit-learn, pandas, numpy), Sklearn (Preprocessing, Pipeline, Ensemble, Metrics), Joblib
 * **Core Algorithms:** Linear Regression, Random Forest Regressor, Gradient Boosting Regressor
+* **Feature Attribution:** SHAP (Global, MAE) 
 * **Live Prediction:** Streamlit, CSS
 
 ## Model Evaluation & Performance Results
